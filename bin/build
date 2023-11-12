@@ -1,2 +1,2 @@
 filename=$1
-gcc -nostdlib -O0 -g $filename -o ${filename%%.*}.bin
+gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
