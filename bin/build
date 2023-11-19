@@ -1,2 +1,8 @@
+set -e
+
 filename=$1
-gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
+#gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
+
+as -g -O0 $filename -o ${filename%.*}.o
+ld ${filename%.*}.o -o ${filename%.*}.bin
+rm ${filename%.*}.o

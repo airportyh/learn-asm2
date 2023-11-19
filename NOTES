@@ -1,0 +1,58 @@
+3 + 4 * 5
+
+parse_and_eval_expr(
+  parse_and_eval_expr(
+    rax = 3
+    rbx = '+'
+    rcx = 1
+    parse_and_eval_expr(
+      rax = 4
+      rbx = '*'
+      rcx = 2
+    ) -> 20
+  ) -> 23
+) -> 23
+
+3 * 4 + 5
+
+parse_and_eval_expr(
+  parse_and_eval_expr(
+    rax = 3
+    rbx = '*'
+    rcx = 2
+    parse_and_eval_expr(
+      rax = 12
+      rbx = '+'
+      rcx = 1
+    ) -> 17
+  ) -> 17
+) -> 17
+
+2 * (3 + (5 - 2))
+
+parse_and_eval_expr(
+  parse_and_eval_expr(
+    rax = 2
+    rbx = '*'
+    parse_and_eval_expr(
+      rax = 3
+      rbx = '+'
+      parse_and_eval_expr(
+        rax = 5
+        rbx = '-'
+      ) -> 3
+    ) -> 6
+  )
+)
+
+1+2+3
+parse_and_eval_expr(
+  parse_and_eval_expr(
+    rax = 1
+    rbx = '+'
+    parse_and_eval_expr(
+     rax = 2
+      rbx = '+'
+    ) => 5
+  ) => 6
+)

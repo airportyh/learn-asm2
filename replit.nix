@@ -6,5 +6,6 @@
 		pkgs.gdb
 		pkgs.gnumake
     pkgs.nasm
+    pkgs.go
 	];
 }

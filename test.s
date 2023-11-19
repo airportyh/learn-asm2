@@ -1,30 +1,16 @@
 	.file	"test.c"
 	.text
-	.globl	myfunc
-myfunc:
-	pushq	%rbp
-	movq	%rsp, %rbp
-	movq	%rdi, -24(%rbp)
-	movq	$3, -8(%rbp)
-	movq	-24(%rbp), %rdx
-	movq	-8(%rbp), %rax
-	addq	%rdx, %rax
-	popq	%rbp
-	ret
-	
- 
-.globl	main
+	.globl	main
+	.type	main, @function
 main:
 	pushq	%rbp
 	movq	%rsp, %rbp
-	subq	$32, %rsp
-	movq	$1, -8(%rbp)
-	movq	$2, -16(%rbp)
-	movq	-8(%rbp), %rax
-	imulq	-16(%rbp), %rax
-	movq	%rax, %rdi
-	call	myfunc
-	movq	%rax, -24(%rbp)
+	subq	$64, %rsp
+	leaq	-64(%rbp), %rax
+	movl	$64, %edx
+	movq	%rax, %rsi
+	movl	$2, %edi
+	call	read@PLT
 	movl	$0, %eax
 	leave
 	ret
