@@ -23,6 +23,15 @@
 8. program counter
 9. system calls
 10. xmm_ instructions
+11. DIY malloc
+
+## Books / Resources
+
+* https://flint.cs.yale.edu/cs422/reference/index.html
+* https://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/
+* https://flint.cs.yale.edu/cs422/readings/pcasm-book.pdf
+* https://www.logix.cz/michal/doc/i386/
+* https://www.amazon.com/Art-Assembly-Language-2nd/dp/1593272073
 
 ## Questions
 
