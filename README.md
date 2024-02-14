@@ -22,6 +22,7 @@
 7. stack pointer
 8. program counter
 9. system calls
+10. xmm_ instructions
 
 ## Questions
 
