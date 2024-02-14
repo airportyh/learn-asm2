@@ -5,6 +5,7 @@ _main:
     mov $0x2000004, %rax
     mov $1, %rdi
     lea msg(%rip), %rsi
+    # length of string
     mov $14, %rdx
     syscall
     
