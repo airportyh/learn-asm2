@@ -1,2 +1,6 @@
-filename=$1
-gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
+# filename=$1
+# gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
+
+gcc -nostdlib -c $1 -O0 -g
+ld -macosx_version_min 10.13.0 -lSystem ${1%.s}.o -o ${1%.s}.bin
+rm ${1%.s}.o
