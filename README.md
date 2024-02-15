@@ -2,8 +2,9 @@
 
 ## Problems
 
-0. simple sums
+0. simple sums (x)
 1. reverse a string
+2. write wc
 2. linked lists
 3. hash table
 4. sort algorithms
