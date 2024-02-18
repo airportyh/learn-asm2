@@ -3,14 +3,16 @@
 ## Problems
 
 0. simple sums (x)
-1. reverse a string
-2. write wc
+1. reverse a string (x)
+2. arthmetic calculator, with + - * / and parans (x)
+1. histogram of letters (x)
+4. malloc
 2. linked lists
 3. hash table
-4. sort algorithms
+5. binary search trees
+2. write wc
 5. binary search
-1. histogram of letters entered by the user
-2. arthmetic calculator, with + - * / and parans
+4. quicksort
 
 ## Topics
 
@@ -33,6 +35,9 @@
 * https://flint.cs.yale.edu/cs422/readings/pcasm-book.pdf
 * https://www.logix.cz/michal/doc/i386/
 * https://www.amazon.com/Art-Assembly-Language-2nd/dp/1593272073
+* http://ref.x86asm.net/
+* https://en.wikipedia.org/wiki/X86_instruction_listings
+* https://visualgdb.com/gdbreference/commands/x
 
 ## Questions
 

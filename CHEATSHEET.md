@@ -16,8 +16,8 @@ From the art of 64-bit assembly:
 |rbx    |ebx    |bx       |bh       |bl      |
 |rcx    |ecx    |cx       |ch       |cl      |
 |rdx    |edx    |dx       |dh       |dl      |
-|rsi    |esi    |si       |         |sil     |
 |rdi    |edi    |di       |         |dil     |
+|rsi    |esi    |si       |         |sil     |
 |rbp    |ebp    |bp       |         |bpl     |
 |rsp    |esp    |sp       |         |spl     |
 |r8     |r8d    |r8w      |         |r8b     |
@@ -26,3 +26,5 @@ From the art of 64-bit assembly:
 |.                                           |
 |.                                           |
 |r15    |r15d   |r15w     |         |r15b    |
+|rip    |                                    |
+|rflags |                                    |

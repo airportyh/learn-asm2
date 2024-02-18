@@ -1,21 +1,20 @@
 .globl _main
 
-exit:
-    mov $0x2000001, %rax
-    mov $0, %rdi
-    syscall
+
 
 _main:
-    leaq    _numbers(%rip), %rdx
+    add $1, %al
+    add $1, %bl
+    add $1, %cl
+    add $1, %dl
+    add $1, %sil
+    add $1, %dil
+    add $1, %bpl
     
-    movq	(%rdx,), %rbx
     
-    movq    $6, %rax
-    movq    (%rdx,%rax,8), %rcx
-    movq    %rbx, (%rdx,%rax,8)
-    movq    %rcx, (%rdx,)
-
-    call    exit
+    
+    
+    ret
 
 .section	__DATA,__data
     .globl	_numbers
