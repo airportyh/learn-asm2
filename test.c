@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int buf[32] = {1, 2, 3};
+long buf[10000];
 int main() {
     return 0;
 }

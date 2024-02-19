@@ -11,42 +11,6 @@ _main:                                  ## @main
 	popq	%rbp
 	retq
                                         ## -- End function
-	.section	__DATA,__data
-	.globl	_buf                    ## @buf
-	.p2align	4
-_buf:
-	.long	1                       ## 0x1
-	.long	2                       ## 0x2
-	.long	3                       ## 0x3
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-	.long	0                       ## 0x0
-
+	.comm	_buf,80000,4            ## @buf
 
 .subsections_via_symbols

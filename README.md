@@ -25,6 +25,7 @@
 7. stack pointer
 8. program counter
 9. system calls
+10. library calls
 10. xmm_ instructions
 11. DIY malloc
 12. time-travel debugging
