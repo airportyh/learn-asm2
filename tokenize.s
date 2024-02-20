@@ -72,7 +72,6 @@ _read_loop_end:
     ret
 
 .section __DATA,__data
-.globl dynamic_data
 .globl message
 message:
     .asciz "to be or not to be? that is the question."
