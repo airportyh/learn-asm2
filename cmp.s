@@ -1,9 +1,12 @@
 .globl _main
 _main:
-    mov $1, %rax
-    mov $0, %rbx
-    cmp %rax, %rbx
-    cmp %rbx, %rax
-    cmp %rax, %rax
-    or 0x80, %rflags
+    mov $1, %al
+    cmpb $0, %al
+    jg _greater
+    jmp _lesser
+    
+_greater:
+    ret
+
+_lesser:
     ret

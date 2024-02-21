@@ -44,3 +44,5 @@
 ## Questions
 
 1. How to snapshot/restore entire process memory?
+2. How to read from rflags/eflags? 
+3. How to manage registers? What strategy to use when choosing between stack memory vs registers?
