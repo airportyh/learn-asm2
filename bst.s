@@ -45,8 +45,8 @@ _main:
     mov $10, %rcx
     # r8 - dynamic_data next available
     lea dynamic_data(%rip), %r8
-    # r9 - dynamic_data beginning
-    mov %r8, %r9
+    # r9 - bst root
+    lea bst_root(%rip), %r9
     # rax - loop counter
     mov $0, %rax
 
@@ -55,9 +55,9 @@ __loop_start:
     mov (%rbx, %rax, 8), %rdx
     lea bst_root(%rip), %rdi
     call _bst_insert
+    add $1, %rax
     cmp %rcx, %rax
     jge __loop_end
-    add $1, %rax
     jmp __loop_start
 
 __loop_end:
