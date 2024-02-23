@@ -38,6 +38,45 @@ __bst_insert_at_leaf:
     movq $0, 16(%rdi)
     ret
 
+# Display numbers in order in output buffer
+# rdi - bst root
+# rbx - output cursor
+_bst_display:
+    push %rbp
+    mov %rsp, %rbp
+    sub $8, %rsp
+    mov (%rdi), %rdi
+    cmp $0, %rdi
+    je __bst_display_done
+    mov %rdi, -8(%rbp)
+    # go left
+    lea 8(%rdi), %rdi
+    call _bst_display
+    
+    # print number
+    mov -8(%rbp), %rdi
+    # for now, only do 1 digit
+    # rbx/bl - char for this number/digit
+    mov (%rdi), %rcx
+    add $48, %rcx
+    movb %cl, (%rbx)
+    add $1, %rbx
+    # comma
+    movb $44, (%rbx)
+    add $1, %rbx
+    # proactive null terminator
+    movb $0, (%rbx)
+    
+    # go right
+    mov -8(%rbp), %rdi
+    lea 16(%rdi), %rdi
+    call _bst_display
+
+__bst_display_done:
+    add $8, %rsp
+    pop %rbp
+    ret
+
 _main:
     # rbx - number array
     lea numbers(%rip), %rbx
@@ -61,6 +100,11 @@ __loop_start:
     jmp __loop_start
 
 __loop_end:
+    lea bst_root(%rip), %rdi
+    lea output(%rip), %rbx
+    call _bst_display
+    lea output(%rip), %rbx
+_done:
     ret
 
 .section __DATA,__data
