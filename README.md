@@ -29,6 +29,7 @@
 10. xmm_ instructions
 11. DIY malloc
 12. time-travel debugging
+13. Recursion
 
 ## Books / Resources
 
@@ -40,6 +41,11 @@
 * http://ref.x86asm.net/
 * https://en.wikipedia.org/wiki/X86_instruction_listings
 * https://visualgdb.com/gdbreference/commands/x
+
+## Classic Recursion Problems
+
+2. Eucid's GCD algorithm
+3. Simple recursive descent parser
 
 ## Questions
 
