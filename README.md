@@ -6,12 +6,13 @@
 1. reverse a string (x)
 2. arthmetic calculator, with + - * / and parans (x)
 1. histogram of letters (x)
+5. binary search trees (x)
+5. binary search
+6. try growing stack upwards in statically allocated memory
 4. malloc
 2. linked lists
 3. hash table
-5. binary search trees
 2. write wc
-5. binary search
 4. quicksort
 
 ## Topics

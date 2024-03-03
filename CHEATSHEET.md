@@ -1,7 +1,7 @@
 ## LLDB
 
 * `register read <?reg name>`
-* `process launch --step-on-entry`
+* `process launch --stop-at-entry`
 * `b main`
 * `x/<n>i $pc`
 * `x/<n>g <addr>`
