@@ -1,48 +1,5 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 13
-	.globl	_func2                  ## -- Begin function func2
-	.p2align	4, 0x90
-_func2:                                 ## @func2
-## %bb.0:
-	pushq	%rbp
-	movq	%rsp, %rbp
-	movq	%rdi, -8(%rbp)
-	movq	%rsi, -16(%rbp)
-	movq	%rdx, -24(%rbp)
-	movq	-8(%rbp), %rdx
-	addq	-16(%rbp), %rdx
-	addq	-24(%rbp), %rdx
-	movq	%rdx, %rax
-	popq	%rbp
-	retq
-                                        ## -- End function
-	.globl	_func                   ## -- Begin function func
-	.p2align	4, 0x90
-_func:                                  ## @func
-## %bb.0:
-	pushq	%rbp
-	movq	%rsp, %rbp
-	subq	$32, %rsp
-	movl	$2, %eax
-	movl	%eax, %ecx
-	movl	$3, %eax
-	movl	%eax, %r8d
-	movq	%rdi, -8(%rbp)
-	movq	%rsi, -16(%rbp)
-	movq	%rdx, -24(%rbp)
-	movq	-24(%rbp), %rdx
-	movq	%rcx, %rdi
-	movq	%r8, %rsi
-	callq	_func2
-	movq	%rax, -32(%rbp)
-	movq	-8(%rbp), %rax
-	addq	-16(%rbp), %rax
-	addq	-24(%rbp), %rax
-	addq	-32(%rbp), %rax
-	addq	$32, %rsp
-	popq	%rbp
-	retq
-                                        ## -- End function
 	.globl	_main                   ## -- Begin function main
 	.p2align	4, 0x90
 _main:                                  ## @main
@@ -50,28 +7,51 @@ _main:                                  ## @main
 	pushq	%rbp
 	movq	%rsp, %rbp
 	subq	$16, %rsp
-	movl	$3, %eax
-	movl	%eax, %edi
-	movl	$4, %eax
-	movl	%eax, %esi
-	movl	$5, %eax
-	movl	%eax, %edx
-	callq	_func
-	leaq	L_.str(%rip), %rdi
-	movq	%rax, -8(%rbp)
-	movq	-8(%rbp), %rsi
+	movl	$0, -4(%rbp)
+	movl	$0, -8(%rbp)
+LBB0_1:                                 ## =>This Inner Loop Header: Depth=1
+	cmpl	$3, -8(%rbp)
+	jge	LBB0_4
+## %bb.2:                               ##   in Loop: Header=BB0_1 Depth=1
+	leaq	L_.str.3(%rip), %rdi
+	leaq	_strings(%rip), %rax
+	movslq	-8(%rbp), %rcx
+	movq	(%rax,%rcx,8), %rsi
 	movb	$0, %al
 	callq	_printf
-	xorl	%ecx, %ecx
 	movl	%eax, -12(%rbp)         ## 4-byte Spill
-	movl	%ecx, %eax
+## %bb.3:                               ##   in Loop: Header=BB0_1 Depth=1
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -8(%rbp)
+	jmp	LBB0_1
+LBB0_4:
+	movl	-4(%rbp), %eax
 	addq	$16, %rsp
 	popq	%rbp
 	retq
                                         ## -- End function
 	.section	__TEXT,__cstring,cstring_literals
 L_.str:                                 ## @.str
-	.asciz	"%lu"
+	.asciz	"flower"
+
+L_.str.1:                               ## @.str.1
+	.asciz	"flow"
+
+L_.str.2:                               ## @.str.2
+	.asciz	"flight"
+
+	.section	__DATA,__data
+	.globl	_strings                ## @strings
+	.p2align	4
+_strings:
+	.quad	L_.str
+	.quad	L_.str.1
+	.quad	L_.str.2
+
+	.section	__TEXT,__cstring,cstring_literals
+L_.str.3:                               ## @.str.3
+	.asciz	"%s\n"
 
 
 .subsections_via_symbols

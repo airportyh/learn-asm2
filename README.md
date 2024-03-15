@@ -53,3 +53,16 @@
 1. How to snapshot/restore entire process memory?
 2. How to read from rflags/eflags? 
 3. How to manage registers? What strategy to use when choosing between stack memory vs registers?
+
+## Reading List
+
+* https://stackoverflow.com/questions/35834937/error-in-backend-32-bit-absolute-addressing-is-not-supported-in-64-bit-mode
+* https://stackoverflow.com/questions/25799551/why-does-this-movq-instruction-work-on-linux-and-not-osx/25804623#25804623
+* https://github.com/aidansteele/osx-abi-macho-file-format-reference
+* otool --help
+* https://en.wikipedia.org/wiki/Mach-O
+* https://cirosantilli.com/elf-hello-world
+* https://stackoverflow.com/questions/12122446/how-does-c-linking-work-in-practice/30507725#30507725
+* man ld
+* https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_toc.html
+* man as
