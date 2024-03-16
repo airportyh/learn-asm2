@@ -42,6 +42,7 @@
 * http://ref.x86asm.net/
 * https://en.wikipedia.org/wiki/X86_instruction_listings
 * https://visualgdb.com/gdbreference/commands/x
+* https://opensource.apple.com/source/lldb/lldb-159/www/lldb-gdb.html
 
 ## Classic Recursion Problems
 
