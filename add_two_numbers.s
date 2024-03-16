@@ -20,7 +20,7 @@ _main:
 _done:
     ret
 
-# %rax is the start of the linked list
+# %rax - number represented as linked list
 _print_num:
     cmpq $0, %rax
     je __print_num_end
@@ -51,7 +51,6 @@ _putchar:
 # list 2 - %rbx
 # carry - %dl, 1 or 0
 # return value in %rcx
-
 _add_two_numbers:
     cmp $0, %rax
     je __add_two_numbers_return_second
@@ -101,7 +100,7 @@ __add_two_numbers_return_first:
 # return value in %rcx
 _carry_plus_number:
     cmp $0, %rax
-    je __carry_plus_number_no_node
+    je __carry_plus_number_return_last_carry
 
     movb (%rax), %bl
     add %dl, %bl
@@ -125,7 +124,7 @@ __carry_plus_number_handle_carry:
     mov $1, %dl
     jmp __carry_plus_number_continue
 
-__carry_plus_number_no_node:
+__carry_plus_number_return_last_carry:
     cmpb $0, %dl
     je __carry_plus_number_return_null
     mov memory_cursor(%rip), %rcx
