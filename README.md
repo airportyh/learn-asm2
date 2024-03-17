@@ -43,6 +43,9 @@
 * https://en.wikipedia.org/wiki/X86_instruction_listings
 * https://visualgdb.com/gdbreference/commands/x
 * https://opensource.apple.com/source/lldb/lldb-159/www/lldb-gdb.html
+* https://en.wikibooks.org/wiki/X86_Assembly/
+* https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_toc.html
+* https://stackoverflow.com/questions/12122446/how-does-c-linking-work-in-practice/30507725#30507725
 
 ## Classic Recursion Problems
 
@@ -63,7 +66,6 @@
 * otool --help
 * https://en.wikipedia.org/wiki/Mach-O
 * https://cirosantilli.com/elf-hello-world
-* https://stackoverflow.com/questions/12122446/how-does-c-linking-work-in-practice/30507725#30507725
 * man ld
-* https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_toc.html
 * man as
+* https://en.wikibooks.org/wiki/X86_Assembly/Data_Transfer

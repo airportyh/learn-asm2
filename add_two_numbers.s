@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/add-two-numbers/description/
 
-.globl _main
+.global _main
 _main:
     lea num1_ones(%rip), %rax
     call _print_num
@@ -209,12 +209,11 @@ num2_thousands:
     .byte 9
     .quad 0
 
-
-.section __DATA,__data
-.comm output, 10000, 4
+.data
+.comm output, 10000
 output_cursor:
     .quad output
 
-.comm memory, 10000, 4
+.comm memory, 10000
 memory_cursor:
     .quad memory
