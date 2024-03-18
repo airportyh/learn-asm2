@@ -1,6 +1,7 @@
 # %rax - number to print
 # used: %rbx, %rdx
 # only positive numbers for now
+# depends: putchar.s
 _print_num:
     mov $0, %rdx
     mov $10, %rbx

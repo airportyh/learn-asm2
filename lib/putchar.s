@@ -1,5 +1,6 @@
 # prints char in %cl
 # used: %rbx
+# depends: output.s
 _putchar:
     mov output_cursor(%rip), %rbx
     movb %cl, (%rbx)
