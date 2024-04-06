@@ -1,6 +1,7 @@
 .include "lib/putchar.s"
 .include "lib/print_num.s"
 .include "lib/lowercase_char.s"
+.include "lib/print_str.s"
 
 # dl - character
 # returns r15 - address of node
@@ -88,20 +89,6 @@ __read_word_end_then_loop_end:
     add $1, %rax
     jmp __read_loop_end
 
-# rdx - string location
-# used: rax, rbx, cl
-_print_str:
-    mov $0, %rax
-__print_loop:
-    movb (%rdx, %rax), %cl
-    cmp $0, %cl
-    jne __print_char
-    ret
-__print_char:
-    call _putchar
-    add $1, %rax
-    jmp __print_loop
-
 # rbx - trie node
 # rcx - string prefix
 # rdx - string prefix end marker pointer
@@ -171,6 +158,7 @@ _main:
     call generate_trie
     mov trie_root(%rip), %rbx
     mov memory_ptr(%rip), %rcx
+    # temporary word buffer
     # assume max of 100-length word
     addq $100, memory_ptr(%rip)
     mov %rcx, %rdx
