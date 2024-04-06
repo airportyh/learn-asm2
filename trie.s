@@ -1,5 +1,6 @@
 .include "lib/putchar.s"
 .include "lib/print_num.s"
+.include "lib/lowercase_char.s"
 
 # dl - character
 # returns r15 - address of node
@@ -29,6 +30,8 @@ __read_loop_end:
     ret
 
 __check_if_alphabet:
+    # lowercase it
+    call _lowercase_char
     # check if it's an alphabet
     cmpb $97, %cl
     jl __skip_char
@@ -65,6 +68,7 @@ __read_next_char:
     movb (%rbx, %rax), %cl
     cmpb $0, %cl
     je __read_word_end_then_loop_end
+    call _lowercase_char
     # check if it's an alphabet
     cmpb $97, %cl
     jl __read_word_end
@@ -139,7 +143,7 @@ __check_count:
     mov (%rsp), %rbx
     mov 1(%rbx), %rax
     call _print_num
-    mov $59, %cl
+    mov $32, %cl
     call _putchar
     mov $32, %cl
     call _putchar
@@ -178,7 +182,7 @@ _done:
 
 passage:
      #.asciz "to be or not to be, that is the question."
-     .asciz "and gibraltar as a girl where I was a flower of the mountain yes when i put the rose in my hair like the andalusian girls used or shall i wear a red yes and how he kissed me under the moorish wall and i thought well as well him as another and then i asked him with my eyes to ask again yes and then he asked me would i yes to say yes my mountain flower and first i put my arms around him yes and drew him down to me so he could feel my breasts all perfume yes and his heart was going like mad and yes i said yes i will Yes."
+     .asciz "Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.” That was the only time I ever heard Atticus say it was a sin to do something, and I asked Miss Maudie about it. “Your father’s right,” she said. “Mockingbirds don’t do one thing except make music for us to enjoy. They don’t eat up people’s gardens, don’t nest in corn cribs, they don’t do one thing but sing their hearts out for us. That’s why it’s a sin to kill a mockingbird."
      # .asciz "a a a a"
 .data
 .comm memory, 100000
