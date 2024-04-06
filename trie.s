@@ -90,9 +90,19 @@ __read_word_end_then_loop_end:
     jmp __read_loop_end
 
 # rbx - trie node
-# rcx - string prefix
-# rdx - string prefix end marker pointer
-# I guess I can allocate stack space in the current function
+# rcx - string prefix for temporary buffer
+# rdx - string prefix end marker pointer for temporary buffer
+# output:
+# rdi - array containing word entries. Each entry contains:
+# * 8 byte pointer to a null-terminated string
+# * 8 byte count for frequence of the word
+_collect_word_entries:
+    # TODO
+    ret
+
+# rbx - trie node
+# rcx - string prefix for temporary buffer
+# rdx - string prefix end marker pointer for temporary buffer
 # uses rax
 _print_word_summary:
     cmp $0, %rbx
@@ -120,7 +130,7 @@ __check_count:
     cmpq $0, 1(%rbx)
     je __traverse_children
 
-    # print word
+__print_word:
     mov %rcx, %rdx
     call _print_str
     mov $58, %cl
