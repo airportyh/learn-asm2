@@ -1,5 +1,5 @@
 # %rax - number to print
-# used: %rbx, %rdx
+# used: %rbx, %rdx, %cl
 # only positive numbers for now
 # depends: putchar.s
 _print_num:
