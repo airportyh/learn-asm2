@@ -11,3 +11,5 @@
 * Text editor
 * Debugger
 * Index generator
+* Web server
+* Make web requests

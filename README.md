@@ -46,6 +46,7 @@
 * https://en.wikibooks.org/wiki/X86_Assembly/
 * https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_toc.html
 * https://stackoverflow.com/questions/12122446/how-does-c-linking-work-in-practice/30507725#30507725
+* https://syscalls64.paolostivanin.com/
 
 ## Classic Recursion Problems
 
@@ -69,3 +70,15 @@
 * man ld
 * man as
 * https://en.wikibooks.org/wiki/X86_Assembly/Data_Transfer
+
+## Debuggers to try
+
+* https://cutter.re/
+* https://github.com/radareorg/radare2
+* https://binary.ninja/
+* IDA
+
+## Try using gdb again?
+
+* https://sourceware.org/gdb/wiki/BuildingOnDarwin
+* https://stackoverflow.com/questions/18423124/please-check-gdb-is-codesigned-see-taskgated8-how-to-get-gdb-installed-w

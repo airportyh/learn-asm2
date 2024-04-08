@@ -3,5 +3,6 @@
 
 # gcc -nostdlib -c $1 -O0 -g
 as $1 -o ${1%.s}.o
-ld -macosx_version_min 10.13.0 -lSystem ${1%.s}.o -o ${1%.s}.bin
+# ld -macosx_version_min 10.13.0 -lSystem ${1%.s}.o -o ${1%.s}.bin
+ld -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem ${1%.s}.o -o ${1%.s}.bin
 rm ${1%.s}.o
