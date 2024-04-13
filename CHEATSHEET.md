@@ -5,6 +5,7 @@
 * `b main`
 * `x/<n>i $pc`
 * `x/<n>g <addr>`
+* help format
 
 ## Registers
 
@@ -28,3 +29,16 @@ From the art of 64-bit assembly:
 |r15    |r15d   |r15w     |         |r15b    |
 |rip    |                                    |
 |rflags |                                    |
+
+## Syscalls
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syscall.h
+
+## Call convention
+
+https://syscalls64.paolostivanin.com/
+
+Syscall number: rax
+Args order: rdi, rsi, rdx, r10, r8, r9
+
+Return value: rax

@@ -9,13 +9,5 @@
 
 int main(void)
 {
-        char *anon;
-        anon = (char*)mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_ANON|MAP_SHARED, -1, 0);
-
-        if (anon == MAP_FAILED) {
-            errx(1, "anon failed");
-        }
-
-        munmap(anon, 4096);
-        return 0;
+    open("test.s", O_RDONLY);
 }

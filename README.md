@@ -77,6 +77,8 @@
 * https://github.com/radareorg/radare2
 * https://binary.ninja/
 * IDA
+* https://cutter.re/
+* https://rizin.re/organization/
 
 ## Try using gdb again?
 
