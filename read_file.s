@@ -10,8 +10,6 @@ _main:
     lea buffer(%rip), %rsi
     mov $100000, %rdx
     call _sys_read
-
-    lea buffer(%rip), %rsi
 _done:
     ret
 
