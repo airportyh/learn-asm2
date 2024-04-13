@@ -9,5 +9,5 @@
 
 int main(void)
 {
-    open("test.s", O_RDONLY);
+    return 0;
 }

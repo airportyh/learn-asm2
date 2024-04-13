@@ -6,16 +6,9 @@ _main:                                  ## @main
 ## %bb.0:
 	pushq	%rbp
 	movq	%rsp, %rbp
-	leaq	L_.str(%rip), %rdi
-	xorl	%esi, %esi
-	movb	$0, %al
-	callq	_open
+	movl	$0, -4(%rbp)
 	xorl	%eax, %eax
 	popq	%rbp
 	retq
                                         ## -- End function
-	.section	__TEXT,__cstring,cstring_literals
-L_.str:                                 ## @.str
-	.asciz	"test.s"
-
 .subsections_via_symbols

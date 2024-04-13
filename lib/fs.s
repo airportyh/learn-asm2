@@ -1,14 +1,19 @@
-_sys_open:
+sys_open:
     mov $0x2000005, %rax
     syscall
     ret
 
-_sys_read:
+sys_close:
+    mov $0x2000006, %rax
+    syscall
+    ret
+
+sys_read:
     mov $0x2000003, %rax
     syscall
     ret
 
-_sys_write:
+sys_write:
     mov $0x2000004, %rax
     syscall
     ret

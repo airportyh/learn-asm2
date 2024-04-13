@@ -1,9 +1,6 @@
 
 .global _main
 _main:
-    mov message(%rip), %rsi
+    #mov $0, %rbx
+    ret
     
-.section __DATA,__data
-.globl message
-message:
-    .asciz "Hello world!"
