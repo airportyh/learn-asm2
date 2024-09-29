@@ -1,8 +1,8 @@
-set -e
+# filename=$1
+# gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
 
-filename=$1
-#gcc -nostdlib -O0 -g $filename -o ${filename%.*}.bin
-
-as -g -O0 $filename -o ${filename%.*}.o
-ld ${filename%.*}.o -o ${filename%.*}.bin
-rm ${filename%.*}.o
+# gcc -nostdlib -c $1 -O0 -g
+as $1 -o ${1%.s}.o
+# ld -macosx_version_min 10.13.0 -lSystem ${1%.s}.o -o ${1%.s}.bin
+ld -L$(xcode-select -p)/SDKs/MacOSX.sdk/usr/lib -lSystem ${1%.s}.o -o ${1%.s}.bin
+rm ${1%.s}.o

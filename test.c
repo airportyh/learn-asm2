@@ -1,7 +1,13 @@
+#include <sys/types.h>
+#include <sys/mman.h>
+#include <err.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 
-int main() {
-  char buf[64];
-  read(2, buf, 64);
-  return 0;
+int main(void)
+{
+    return 0;
 }
