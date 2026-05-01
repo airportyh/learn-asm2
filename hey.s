@@ -5,7 +5,7 @@ _start:
     mov $1, %rax
     mov $1, %rdi
     lea msg(%rip), %rsi
-    mov $4, %rdx
+    mov $5, %rdx
     syscall
 
     # sys_exit: syscall number 60
@@ -15,4 +15,4 @@ _start:
 
 .section .rodata
 msg:
-    .asciz "hey\n"
+    .asciz "hiya\n"
