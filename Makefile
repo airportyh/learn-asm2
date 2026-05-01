@@ -1,3 +1,5 @@
+ARGS ?= 12 99
+
 all: add
 
 add: add.asm
@@ -5,7 +7,7 @@ add: add.asm
 	ld -o add add.o
 
 run: add
-	./add
+	./add $(ARGS)
 
 clean:
 	rm -f add.o add
