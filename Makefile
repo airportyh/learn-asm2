@@ -9,5 +9,9 @@ add: add.asm
 run: add
 	./add $(ARGS)
 
+yes: yes.s
+	as -o yes.o yes.s
+	ld -o yes yes.o
+
 clean:
-	rm -f add.o add
+	rm -f add.o add yes.o yes
