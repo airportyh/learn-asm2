@@ -9,5 +9,9 @@ add: add.asm
 run: add
 	./add $(ARGS)
 
+whatsup: whatsup.asm
+	nasm -f elf64 -o whatsup.o whatsup.asm
+	ld -o whatsup whatsup.o
+
 clean:
-	rm -f add.o add
+	rm -f add.o add whatsup.o whatsup
