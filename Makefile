@@ -9,5 +9,12 @@ add: add.asm
 run: add
 	./add $(ARGS)
 
+hola: hola.s
+	mkdir -p bin
+	as -o hola.o hola.s
+	ld -o bin/hola hola.o
+	rm -f hola.o
+
 clean:
-	rm -f add.o add
+	rm -f add.o add hola.o
+	rm -rf bin
