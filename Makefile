@@ -16,5 +16,4 @@ hola: hola.s
 	rm -f hola.o
 
 clean:
-	rm -f add.o add hola.o
-	rm -rf bin
+	rm -f add.o add hola.o bin/hola
