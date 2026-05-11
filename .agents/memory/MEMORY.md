@@ -1,0 +1,1 @@
+- [NASM Linux setup](.agents/memory/nasm-linux.md): Project uses nasm -f elf64 + ld for x86-64 Linux programs; Makefile must use real TABs (not spaces) or make fails with "missing separator".
