@@ -18,6 +18,10 @@ author = "agent"
 task = "workflow.run"
 args = "Run dinghy"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run dilbert"
+
 [[workflows.workflow]]
 name = "Run dinghy"
 author = "agent"
@@ -25,6 +29,17 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "make run-dinghy"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "Run dilbert"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make run-dilbert"
 
 [workflows.workflow.metadata]
 outputType = "console"
