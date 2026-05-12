@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add dinghy
+all: add hey_brother dinghy
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -16,5 +16,11 @@ dinghy: dinghy.asm
 run-dinghy: dinghy
 	./dinghy
 
+run_hey_brother: hey_brother
+	./hey_brother
+
 clean:
-	rm -f add.o add dinghy.o dinghy
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy
+hey_brother: hey_brother.asm
+	nasm -f elf64 -o hey_brother.o hey_brother.asm
+	ld -o hey_brother hey_brother.o
