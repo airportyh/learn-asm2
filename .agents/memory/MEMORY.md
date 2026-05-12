@@ -1,2 +1,4 @@
+- [NASM/Makefile notes](.agents/memory/nasm-makefile.md) — NASM build setup, Makefile tab gotcha, syscall conventions
 - [Makefile tab issue](.agents/memory/makefile-notes.md): Makefile in this project used spaces instead of tabs; always write Makefile with literal tab characters or it will error with "missing separator".
 - [NASM Linux programs](.agents/memory/nasm-notes.md): NASM x86-64 programs use `nasm -f elf64` + `ld`; syscall 1 = sys_write, syscall 60 = sys_exit; message defined in `.data` section with `equ $ - label` for length.
+
