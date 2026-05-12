@@ -1,0 +1,1 @@
+- [NASM/Makefile notes](.agents/memory/nasm-makefile.md) — NASM build setup, Makefile tab gotcha, syscall conventions
