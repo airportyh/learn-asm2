@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark
+all: add hey_brother dinghy dilbert denmark poland
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -37,5 +37,12 @@ denmark: denmark.asm
 run-denmark: denmark
 	./denmark
 
+poland: poland.asm
+	nasm -f elf64 -o poland.o poland.asm
+	ld -o poland poland.o
+
+run-poland: poland
+	./poland
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland
