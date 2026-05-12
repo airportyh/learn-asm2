@@ -1,0 +1,1 @@
+- [NASM Linux programs](.agents/memory/nasm-notes.md): Pattern for x86-64 NASM programs in this repo (syscalls, Makefile targets, elf64 format).
