@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland
+all: add hey_brother dinghy dilbert denmark poland yonkers
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -44,5 +44,12 @@ poland: poland.asm
 run-poland: poland
 	./poland
 
+yonkers: yonkers.asm
+	nasm -f elf64 -o yonkers.o yonkers.asm
+	ld -o yonkers yonkers.o
+
+run-yonkers: yonkers
+	./yonkers
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers
