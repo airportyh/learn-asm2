@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add
+all: add dinghy
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -9,5 +9,12 @@ add: add.asm
 run: add
 	./add $(ARGS)
 
+dinghy: dinghy.asm
+	nasm -f elf64 -o dinghy.o dinghy.asm
+	ld -o dinghy dinghy.o
+
+run-dinghy: dinghy
+	./dinghy
+
 clean:
-	rm -f add.o add
+	rm -f add.o add dinghy.o dinghy

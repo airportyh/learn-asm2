@@ -1,0 +1,1 @@
+- [NASM Linux programs](.agents/memory/nasm-linux.md) — conventions and build setup for x86-64 NASM programs in this repo
