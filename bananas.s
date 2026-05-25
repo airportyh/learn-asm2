@@ -15,4 +15,4 @@ _start:
 
 .section .rodata
 msg:
-    .asciz "bananas\n"
+    .asciz "bananas\n" # I love bananas
