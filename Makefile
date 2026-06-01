@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -58,5 +58,12 @@ jam: jam.asm
 run-jam: jam
 	./jam
 
+jack_in_the_box: jack_in_the_box.asm
+	nasm -f elf64 -o jack_in_the_box.o jack_in_the_box.asm
+	ld -o jack_in_the_box jack_in_the_box.o
+
+run-jack_in_the_box: jack_in_the_box
+	./jack_in_the_box
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box
