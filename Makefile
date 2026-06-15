@@ -65,5 +65,12 @@ jack_in_the_box: jack_in_the_box.asm
 run-jack_in_the_box: jack_in_the_box
 	./jack_in_the_box
 
+heron: heron.asm
+	nasm -f elf64 -o heron.o heron.asm
+	ld -o heron heron.o
+
+run-heron: heron
+	./heron
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box heron.o heron
