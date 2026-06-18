@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck give_me_the_button
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -79,5 +79,12 @@ what_the_heck: what_the_heck.asm
 run-what_the_heck: what_the_heck
 	./what_the_heck
 
+give_me_the_button: give_me_the_button.asm
+	nasm -f elf64 -o give_me_the_button.o give_me_the_button.asm
+	ld -o give_me_the_button give_me_the_button.o
+
+run-give_me_the_button: give_me_the_button
+	./give_me_the_button
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck give_me_the_button.o give_me_the_button
