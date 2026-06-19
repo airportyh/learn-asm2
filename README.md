@@ -1,5 +1,13 @@
 # Learn ASM 2
 
+A personal learning journal for x86-64 assembly language programming. This repo tracks topics, exercises, problems, resources, and open questions encountered along the way.
+
+## Overview
+
+This project documents a hands-on journey through low-level assembly programming on Linux/macOS, covering everything from basic arithmetic and memory addressing to writing a web server and implementing classic data structures in ASM.
+
+## Questions
+
 2. How to snapshot entire process memory?
 3. How to restore ...?
 
