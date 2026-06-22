@@ -93,5 +93,12 @@ brad_mehldau: brad_mehldau.asm
 run-brad_mehldau: brad_mehldau
 	./brad_mehldau
 
+another_test_message: another_test_message.asm
+	nasm -f elf64 -o another_test_message.o another_test_message.asm
+	ld -o another_test_message another_test_message.o
+
+run-another_test_message: another_test_message
+	./another_test_message
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau another_test_message.o another_test_message
