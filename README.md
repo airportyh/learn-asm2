@@ -1,5 +1,7 @@
 # Learn ASM 2
 
+A collection of x86-64 assembly experiments, exercises, and notes.
+
 2. How to snapshot entire process memory?
 3. How to restore ...?
 
