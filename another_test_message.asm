@@ -5,13 +5,17 @@ section .data
 section .text
     global _start
 
+SYS_WRITE equ 1
+SYS_EXIT  equ 60
+STDOUT    equ 1
+
 _start:
-    mov rax, 1          ; sys_write
-    mov rdi, 1          ; stdout
+    mov rax, SYS_WRITE
+    mov rdi, STDOUT
     mov rsi, msg
     mov rdx, msg_len
     syscall
 
-    mov rax, 60         ; sys_exit
+    mov rax, SYS_EXIT
     xor rdi, rdi
     syscall
