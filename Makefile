@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau leroy_jenkins
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -93,5 +93,12 @@ brad_mehldau: brad_mehldau.asm
 run-brad_mehldau: brad_mehldau
 	./brad_mehldau
 
+leroy_jenkins: leroy_jenkins.asm
+	nasm -f elf64 -o leroy_jenkins.o leroy_jenkins.asm
+	ld -o leroy_jenkins leroy_jenkins.o
+
+run-leroy_jenkins: leroy_jenkins
+	./leroy_jenkins
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau leroy_jenkins.o leroy_jenkins
