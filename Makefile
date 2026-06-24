@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau hello_replit
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -93,5 +93,12 @@ brad_mehldau: brad_mehldau.asm
 run-brad_mehldau: brad_mehldau
 	./brad_mehldau
 
+hello_replit: hello_replit.asm
+	nasm -f elf64 -o hello_replit.o hello_replit.asm
+	ld -o hello_replit hello_replit.o
+
+run-hello_replit: hello_replit
+	./hello_replit
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau hello_replit.o hello_replit
