@@ -1,3 +1,26 @@
 *.bin
 *.o
+
+# Assembled program binaries (built by the Makefile)
 add
+hey_brother
+dinghy
+dilbert
+denmark
+poland
+yonkers
+jam
+jack_in_the_box
+jank
+what_the_heck
+tommy_lee_jones
+brad_mehldau
+hello_repl
+
+# Standalone assembled binaries
+bananas
+do_it
+francesca
+hello_tom
+ni_hao
+replit_ftw

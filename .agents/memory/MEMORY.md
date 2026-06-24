@@ -1,3 +1,4 @@
 - [NASM Linux programs](.agents/memory/nasm-linux.md) — conventions and build setup for x86-64 NASM programs in this repo
+- [NASM build artifacts](.agents/memory/nasm-build-artifacts.md) — gitignore every program binary by name; Replit auto-commit re-adds un-ignored built binaries
 - Makefile tab issue: The project Makefile historically used 8 spaces instead of tabs — always write/rewrite with literal tab characters or make errors with "missing separator". Fixed across all targets in Task #6.
 - [NASM Linux programs](.agents/memory/nasm-notes.md): NASM x86-64 programs use `nasm -f elf64` + `ld`; syscall 1 = sys_write, syscall 60 = sys_exit; message defined in `.data` section with `equ $ - label` for length.
