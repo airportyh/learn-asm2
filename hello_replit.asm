@@ -1,3 +1,5 @@
+SYS_WRITE equ 1
+
 section .data
     msg db "Hello from Replit!", 0x0a
     msg_len equ $ - msg
@@ -6,7 +8,7 @@ section .text
     global _start
 
 _start:
-    mov rax, 1          ; sys_write
+    mov rax, SYS_WRITE  ; sys_write
     mov rdi, 1          ; stdout
     mov rsi, msg
     mov rdx, msg_len
