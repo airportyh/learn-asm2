@@ -1,8 +1,8 @@
 ; jack_in_the_box.asm
-; Prints "Jack in the box" to stdout
+; Prints "Jack in the box!" to stdout
 
 section .data
-    msg db "Jack in the box", 10   ; message with newline
+    msg db "Jack in the box!", 10   ; message with newline
     msg_len equ $ - msg
 
 section .text
