@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau hello_replit atlanta
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau hello_replit atlanta torrey_pines
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -107,5 +107,12 @@ atlanta: atlanta.asm
 run-atlanta: atlanta
 	./atlanta
 
+torrey_pines: torrey_pines.asm
+	nasm -f elf64 -o torrey_pines.o torrey_pines.asm
+	ld -o torrey_pines torrey_pines.o
+
+run-torrey_pines: torrey_pines
+	./torrey_pines
+
 clean:
-	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau hello_replit.o hello_replit atlanta.o atlanta
+	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau hello_replit.o hello_replit atlanta.o atlanta torrey_pines.o torrey_pines
