@@ -1,5 +1,5 @@
 section .data
-    msg db "Atlanta Hartsfield Airport", 0x0a
+    msg db "ATL Airport", 0x0a
     msg_len equ $ - msg
 
 section .text
