@@ -1,5 +1,5 @@
 section .data
-    msg db "Brad Mehldau", 0x0a
+    msg db "Brad Mehldau piano", 0x0a
     msg_len equ $ - msg
 
 section .text
