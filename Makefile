@@ -1,6 +1,6 @@
 ARGS ?= 12 99
 
-all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau hello_replit atlanta torrey_pines san_diego
+all: add hey_brother dinghy dilbert denmark poland yonkers jam jack_in_the_box jank what_the_heck tommy_lee_jones brad_mehldau hello_replit atlanta torrey_pines san_diego testing_testing
 
 add: add.asm
 	nasm -f elf64 -o add.o add.asm
@@ -120,6 +120,13 @@ san_diego: san_diego.asm
 
 run-san_diego: san_diego
 	./san_diego
+
+testing_testing: testing_testing.asm
+	nasm -f elf64 -o testing_testing.o testing_testing.asm
+	ld -o testing_testing testing_testing.o
+
+run-testing_testing: testing_testing
+	./testing_testing
 
 clean:
 	rm -f add.o add hey_brother.o hey_brother dinghy.o dinghy dilbert.o dilbert denmark.o denmark poland.o poland yonkers.o yonkers jam.o jam jack_in_the_box.o jack_in_the_box jank.o jank what_the_heck.o what_the_heck tommy_lee_jones.o tommy_lee_jones brad_mehldau.o brad_mehldau hello_replit.o hello_replit atlanta.o atlanta torrey_pines.o torrey_pines
